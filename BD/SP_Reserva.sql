@@ -1,0 +1,109 @@
+USE HOTEL
+GO
+CREATE OR ALTER PROCEDURE SP_Reserva
+(
+	@ACCION INT,
+	@FECHAI DATETIME,
+	@FECHAF DATETIME,
+	@CIUDAD NVARCHAR(250),
+	@PERSONAS INT,
+	@THIRDID BIGINT,
+	@HABITACIONID INT,
+	@PRIMERNOMBRE NVARCHAR(250),
+	@SEGUNDONOMBRE NVARCHAR(250),
+	@PRIMERAPELLIDO NVARCHAR(250),
+	@SEGUNDOAPELLIDO NVARCHAR(250),
+	@FECHANACIMIENTO NVARCHAR(250),
+	@GENEROID INT,
+	@TIPODOCUMENTO INT,
+	@NUMERODOCUMENTO INT,
+	@EMAIL NVARCHAR(250),
+	@TELEFONO NVARCHAR(12),
+	@THIRDTYPEID INT,
+	@RESERVAID BIGINT
+)
+AS
+BEGIN
+	IF @ACCION = 1
+		BEGIN
+			SELECT		R.Id,H.Nombre, HA.HabitacionTipo, HA.Habitaion, HA.Ubicacion, 
+						DH.CostoBase, DH.Impuestos
+			FROM		HOTEL H
+			INNER JOIN	DETALLEHABITACION DH
+						ON DH.HotelId = H.Id
+			INNER JOIN	HABITACIONES HA
+						ON HA.Id = DH.HabitacionId
+			INNER JOIN	RESERVA R
+						ON R.HabitacionDetalleId = DH.Id
+			WHERE		DH.Activa = 1 AND H.Ativo = 1 AND (
+						(FECHAI >= @FECHAI AND FECHAF <= @FECHAF)
+						OR FECHAI >= @FECHAI
+						OR CIUDAD LIKE '%' + @CIUDAD + '%'
+						OR CANTIDADPERSONAS = @PERSONAS)
+		END
+	IF @ACCION = 2
+		BEGIN
+			INSERT INTO RESERVA 
+			(
+				HabitacionDetalleId,
+				ThirdId,
+				FECHAI,
+				FECHAF,
+				CANTIDADPERSONAS,
+				CIUDAD
+			)
+			VALUES
+			(
+				@HABITACIONID,
+				@THIRDID,
+				@FECHAI,
+				@FECHAF,
+				@PERSONAS,
+				@CIUDAD
+			)
+		END
+	IF @ACCION = 3
+		BEGIN
+			INSERT INTO THIRD
+			(
+				PrimerNombre,
+				SegundoNombre,
+				PrimerApellido,
+				SegundoApellido,
+				FechNacimiento,
+				GeneroId,
+				TipoDocumento,
+				NumeroDocumento,
+				Email,
+				TelefonoContato,
+				ThirdTypeId
+			)
+			VALUES
+			(
+				@PRIMERNOMBRE,
+				@SEGUNDONOMBRE,
+				@PRIMERAPELLIDO,
+				@SEGUNDOAPELLIDO,
+				@FECHANACIMIENTO,
+				@GENEROID,
+				@TIPODOCUMENTO,
+				@NUMERODOCUMENTO,
+				@EMAIL,
+				@TELEFONO,
+				@THIRDTYPEID
+			)
+
+			SELECT @THIRDID = @@IDENTITY
+
+			INSERT INTO DETALLEPERSONASRESERVA
+			(
+				ThirdId,
+				ReservaId
+			)
+			VALUES
+			(
+				@THIRDID,
+				@RESERVAID
+			)
+		END
+END

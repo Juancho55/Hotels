@@ -1,0 +1,104 @@
+USE HOTEL
+GO
+CREATE OR ALTER PROCEDURE SP_Hotel
+(
+	@ACCION INT, 
+	@HOTELID INT,
+	@NOMBRE NVARCHAR(250),
+	@DIRECCION NVARCHAR(500),
+	@DESCRIPCION NVARCHAR(MAX),
+	@HABITACION NVARCHAR(200),
+	@UBICACION NVARCHAR(200),
+	@HABITACIONTIPO NVARCHAR(200),
+	@HABITACIONID INT,
+	@COSTOBASE MONEY,
+	@IMPUESTOS MONEY,
+	@ACTIVA BIT,
+	@THIRDID BIGINT,
+	@RESERVAID BIGINT
+)
+AS
+BEGIN
+	IF @ACCION = 1
+		BEGIN
+			INSERT INTO HOTEL (Nombre, Direccion, Descripcion, Ativo)
+			VALUES 
+			(@NOMBRE, @DIRECCION, @DESCRIPCION, 1)
+		END
+	IF @ACCION = 2
+		BEGIN			
+			
+			INSERT INTO HABITACIONES (Habitaion,Ubicacion,HabitacionTipo)
+			VALUES
+			(@HABITACION,@UBICACION, @HABITACIONTIPO)
+
+			DECLARE @IDENTITY INT 
+
+			SELECT @IDENTITY = @@IDENTITY;
+
+			INSERT INTO DETALLEHABITACION (CostoBase, Impuestos, HabitacionId, HotelId, Activa)
+			values
+			(@COSTOBASE, @IMPUESTOS,@IDENTITY, @HOTELID, 1)
+
+		END
+
+	IF @ACCION = 3
+		BEGIN			
+			UPDATE	DETALLEHABITACION
+			SET		CostoBase = @COSTOBASE,
+					Impuestos = @IMPUESTOS,
+					Activa = @ACTIVA
+			WHERE	HabitacionId = @HABITACIONID 
+					AND HotelId = @HOTELID
+		END
+
+	IF @ACCION = 4
+		BEGIN			
+			UPDATE	HOTEL
+			SET		Nombre = @NOMBRE,
+					Direccion = @DIRECCION,
+					Ativo = @ACTIVA
+			WHERE	Id = @HOTELID
+		END
+
+	IF @ACCION = 5
+		BEGIN
+			SELECT		HO.Nombre, HO.Direccion, HO.Descripcion, R.Id, R.FECHAI, R.FECHAF
+			FROM		THIRD T
+			INNER JOIN	RESERVA R
+						ON R.ThirdId = T.Id			
+			INNER JOIN	DETALLEHABITACION DH
+						ON DH.Id = R.HabitacionDetalleId
+			INNER JOIN	HABITACIONES H
+						ON H.Id = DH.HabitacionId
+			INNER JOIN	HOTEL HO
+						ON HO.Id = DH.HotelId
+			WHERE		T.Id = @THIRDID
+						AND R.FECHAI >= GETDATE()
+						OR R.FECHAF >= GETDATE()
+			GROUP BY	HO.Nombre, HO.Direccion, HO.Descripcion, R.Id, R.FECHAI, R.FECHAF
+			ORDER BY	HO.Nombre, R.FECHAI, R.FECHAF
+		END
+	If @ACCION = 6
+		BEGIN
+			SELECT		HO.Nombre, R.FECHAI, R.FECHAF, R.CANTIDADPERSONAS, R.CIUDAD,
+						H.HabitacionTipo, H.Habitaion, H.Ubicacion, 
+						DH.CostoBase, DH.Impuestos, TT.Nombre TipoPersona,
+						T.PrimerNombre, T.SegundoNombre,
+						T.PrimerApellido, T.SegundoApellido, T.Email, T.TelefonoContato						
+			FROM		RESERVA R
+			INNER JOIN	DETALLEPERSONASRESERVA P
+						ON P.ReservaId = R.Id
+			INNER JOIN	THIRD T
+						ON T.Id = P.ThirdId
+			INNER JOIN	THIRDTYPE TT
+						ON TT.Id = T.ThirdTypeId
+			INNER JOIN	DETALLEHABITACION DH
+						ON DH.Id = R.HabitacionDetalleId
+			INNER JOIN	HABITACIONES H
+						ON H.Id = DH.HabitacionId
+			INNER JOIN	HOTEL HO
+						ON HO.Id = DH.HotelId
+			WHERE		R.Id = @RESERVAID
+		END
+END
