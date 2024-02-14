@@ -1,0 +1,12 @@
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\bin\Debug\net6.0\HOTEL.ADO.deps.json
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\bin\Debug\net6.0\HOTEL.ADO.dll
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\bin\Debug\net6.0\HOTEL.ADO.pdb
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.csproj.AssemblyReference.cache
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.AssemblyInfoInputs.cache
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.AssemblyInfo.cs
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.csproj.CoreCompileInputs.cache
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.dll
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\refint\HOTEL.ADO.dll
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\HOTEL.ADO.pdb
+C:\Projects\PruebaTecnia\HOTEL.AP\HOTEL.ADO\obj\Debug\net6.0\ref\HOTEL.ADO.dll
