@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OH7zX7TWO3+g8w7fAQSMrkJcChcZrpWHnt+NPOHXSY28qnAKyr+Yq90WFT4D/+LtFhNOtRuFCD2rkK0ZZj3hoQ==",
+  "dgSpecHash": "4Va0Pb5gPbchB1AjpeGWPB+8S4YsgxRHEZ1hwCAW/Btn4fyQjeBQ2xKUuFXQN/SAUqM4YeuR9dWO0yWgVyAl3w==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
+  "projectFilePath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",

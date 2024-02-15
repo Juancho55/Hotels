@@ -23,6 +23,6 @@ namespace HOTEL.AP.Result
 
     public class CreateContent
     {
-        public object data { get; set; }
+        public object? data { get; set; }
     }
 }

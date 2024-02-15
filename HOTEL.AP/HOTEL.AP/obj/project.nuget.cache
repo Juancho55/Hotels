@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jNGlJ411YzcqPLv/is/vCCbTRcOzRLktB7ZxcBfjYxgsMCNCfzdyzojEapWllkNr1p1fPW8HY0WV4+FqzrhX3w==",
+  "dgSpecHash": "lZGJU+N0yNkkpI6xh1b6pjvtVb20eheIvf1bcSCWNlmXS/Ft1r2/VH+gdJU0TVrQd58ZSXNFUmhJLRxZw00tLA==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
+  "projectFilePath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",

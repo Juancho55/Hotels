@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Linq;
 
-namespace HOTEL.AP.Controllers
+namespace HOTEL.AP
 {
     public class BaseController : Controller
     {

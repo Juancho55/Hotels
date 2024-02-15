@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace HOTEL.AP.Result
 {
@@ -30,12 +32,12 @@ namespace HOTEL.AP.Result
 
     public class Error
     {
-        public string Code { get; set; }
-        public string Message { get; set; }
+        public string? Code { get; set; }
+        public string? Message { get; set; }
     }
 
     public class BadRequest
     {
-        public Error Error { get; set; }
+        public Error? Error { get; set; }
     }
 }

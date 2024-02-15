@@ -23,23 +23,23 @@ namespace Infra.Hotel
         {
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionSaveHotel },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionSaveHotel },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };
 
-            int result = await context.ExecuteNonQueryAsync("SP_Hotel", parameters);
+            int result = await context.ExecuteNonQueryAsync("dbo.SP_Hotel", parameters);
 
             if (result == 0)
                 return false;
@@ -51,18 +51,18 @@ namespace Infra.Hotel
         {
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionSaveRoom },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionSaveRoom },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };
@@ -79,18 +79,18 @@ namespace Infra.Hotel
         {
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionUpdateHotel },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionUpdateHotel },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };
@@ -107,18 +107,18 @@ namespace Infra.Hotel
         {
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionUpdateRoom },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionUpdateRoom },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };
@@ -136,18 +136,18 @@ namespace Infra.Hotel
             List<ResponseBookingModel> responseBookingModel = new List<ResponseBookingModel>();
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionGetBooking },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionGetBooking },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };
@@ -181,18 +181,18 @@ namespace Infra.Hotel
             ResponstBookingDetailModel responseBookingModel = new ResponstBookingDetailModel();
             var parameters = new SqlParameter[]
             {
-                new SqlParameter{ ParameterName = "@ACTION", SqlDbType = SqlDbType.Int, Value = Constant.ActionGetBookingDetail },
+                new SqlParameter{ ParameterName = "@ACCION", SqlDbType = SqlDbType.Int, Value = Constant.ActionGetBookingDetail },
                 new SqlParameter{ ParameterName = "@HOTELID", SqlDbType = SqlDbType.Int, Value = request.HotelId },
                 new SqlParameter{ ParameterName = "@NOMBRE", SqlDbType = SqlDbType.NVarChar, Value = request.Name },
                 new SqlParameter{ ParameterName = "@DIRECCION", SqlDbType = SqlDbType.NVarChar, Value = request.Address },
                 new SqlParameter{ ParameterName = "@DESCRIPCION", SqlDbType = SqlDbType.NVarChar, Value = request.Description },
                 new SqlParameter{ ParameterName = "@HABITACION", SqlDbType =SqlDbType.NVarChar, Value = request.Room },
-                new SqlParameter{ ParameterName = "@UBIACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
+                new SqlParameter{ ParameterName = "@UBICACION", SqlDbType = SqlDbType.NVarChar, Value = request.Place },
                 new SqlParameter{ ParameterName = "@HABITACIONTIPO", SqlDbType = SqlDbType.NVarChar, Value = request.RoomType },
                 new SqlParameter{ ParameterName = "@HABITACIONID", SqlDbType = SqlDbType.Int, Value = request.RoomId },
                 new SqlParameter{ ParameterName = "@COSTOBASE", SqlDbType = SqlDbType.Decimal, Value = request.BaseCost },
                 new SqlParameter{ ParameterName = "@IMPUESTOS", SqlDbType = SqlDbType.Decimal, Value = request.Taxes },
-                new SqlParameter{ ParameterName = "@ATIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
+                new SqlParameter{ ParameterName = "@ACTIVA", SqlDbType = SqlDbType.Bit, Value = request.Active },
                 new SqlParameter{ ParameterName = "@THIRDID", SqlDbType = SqlDbType.BigInt, Value = request.ThirdId },
                 new SqlParameter{ ParameterName = "@RESERVAID", SqlDbType = SqlDbType.BigInt, Value = request.BookingId }
             };

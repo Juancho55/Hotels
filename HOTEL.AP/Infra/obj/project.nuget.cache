@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B+9INNHBxaOy5qcqNsTmZao3ma/eYDPBLn9eHLV0Fkj/KNt7yb8gHBGPHAgpjFLMPCKIlz/lLFcDEM4gO5rhkQ==",
+  "dgSpecHash": "Z5/eITwVQuFerIztEsi0CqXC12VI+LVhYM7DlPBCr3HnGU92whxJRa6Xf7IYT/TDk0YEhUFOuL1Ewrlos5836Q==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

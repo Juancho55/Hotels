@@ -58,24 +58,18 @@ namespace HOTEL.AP
 
             app.UseCors();
 
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-            app.UseSwagger();
-
-            app.UseDeveloperExceptionPage();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("./swagger/v1/swagger.json", "HOTELS");
-                c.InjectStylesheet("./swagger-ui/custom.css");
-                c.RoutePrefix = string.Empty;
-            });
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "HOTEL.API");
+                c.InjectStylesheet("../swagger-ui/custom.css");
+                c.RoutePrefix = string.Empty;
             });
         }
     }

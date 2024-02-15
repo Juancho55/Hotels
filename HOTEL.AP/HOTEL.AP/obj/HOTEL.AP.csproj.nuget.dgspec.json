@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj": {}
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj": {
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
+        "projectUniqueName": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
         "projectName": "HOTEL.ADO",
-        "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
+        "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\obj\\",
+        "outputPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj": {
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
+        "projectUniqueName": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
         "projectName": "HOTEL.AP",
-        "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
+        "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\HOTEL.AP.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.AP\\obj\\",
+        "outputPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.AP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,8 +101,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\Services.csproj": {
-                "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\Services.csproj"
+              "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\Services.csproj": {
+                "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\Services.csproj"
               }
             }
           }
@@ -117,9 +117,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
               "target": "Package",
               "version": "[5.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -153,14 +161,14 @@
         }
       }
     },
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj": {
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj",
+        "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\obj\\",
+        "outputPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -181,11 +189,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj": {
-                "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj"
+              "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj": {
+                "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\HOTEL.ADO\\HOTEL.ADO.csproj"
               },
-              "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\Models.csproj": {
-                "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\Models.csproj"
+              "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\Models.csproj": {
+                "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\Models.csproj"
               }
             }
           }
@@ -233,14 +241,14 @@
         }
       }
     },
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\Models.csproj": {
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\Models.csproj",
+        "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Models\\obj\\",
+        "outputPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -292,14 +300,14 @@
         }
       }
     },
-    "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\Services.csproj": {
+    "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\Services.csproj",
+        "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Services\\obj\\",
+        "outputPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -320,8 +328,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Projects\\PruebaTecnia\\HOTEL.AP\\Infra\\Infra.csproj"
+              "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Projects\\OTHER TES\\Hotels\\HOTEL.AP\\Infra\\Infra.csproj"
               }
             }
           }

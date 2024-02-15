@@ -4,7 +4,11 @@ using HOTEL.AP.Models.Mapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.Hotel;
+using System;
+using System.Collections.Generic;
 using System.Net.Mime;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace HOTEL.AP.Controllers
 {
@@ -13,32 +17,23 @@ namespace HOTEL.AP.Controllers
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public class HotelController : BaseController
+    [Route("[controller]")]
+    public class HotelController : ControllerBase
     {
         private readonly IHotelService hotelService;
 
-        public HotelController(IMapper mapper, IHotelService hotelService) : base(mapper)
+        public HotelController(IHotelService hotelService)
         {
             this.hotelService = hotelService;
         }
 
-        [HttpPost]
-        [AllowAnonymous]
-        [Route("hotel/Save")]
+        [HttpPost(Name = "SaveHotel")]
         public async Task<IActionResult> SaveHotel([FromBody] HotelRequestFilterModel model)
         {
-            if (!ModelState.IsValid) return GetBadRequest();
-
-            try
-            {
                 bool result = await hotelService.SaveHotel(new HotelMapperAPI().MapReq(model));
 
                 return new Result.CreateResult(result);
-            }
-            catch(Exception ex)
-            {
-                return GetErrorresult(ex);
-            }
         }
+
     }
 }
