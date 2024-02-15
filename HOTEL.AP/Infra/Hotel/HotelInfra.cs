@@ -163,12 +163,14 @@ namespace Infra.Hotel
                         response.NameHotel = dr["Nombre"].ToString();
                         response.Address = dr["Direccion"].ToString();
                         response.Description = dr["Descripcion"].ToString();
-                        response.BookingModels.Add(new BookingModel()
+                        BookingModel booking = new BookingModel()
                         {
                             Id = long.Parse(dr["Id"].ToString()),
                             DateS = Convert.ToDateTime(dr["FECHAI"].ToString()),
-                            DateE = Convert.ToDateTime(dr["FEHAF"].ToString())
-                        });
+                            DateE = Convert.ToDateTime(dr["FECHAF"].ToString())
+                        };
+                        response.BookingModels?.Add(booking);
+
                         responseBookingModel?.Add(response);
                     }
                 }

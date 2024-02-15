@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Services.Services.Booking;
 using Services.Services.Hotel;
 using System.Reflection;
 
@@ -14,6 +15,7 @@ namespace Services
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddSingleton<IHotelService, HotelService>();
+            services.AddSingleton<IBookingService, BookingService>();
         }
     }
 }

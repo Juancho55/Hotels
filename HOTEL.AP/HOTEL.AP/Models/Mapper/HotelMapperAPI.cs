@@ -25,5 +25,19 @@ namespace HOTEL.AP.Models.Mapper
                 RoomId = model.RoomId.HasValue ? model.RoomId.Value : 0
             };
         }
+
+        public List<ResponseBookingModel> MapRes(List<ResponseBookingServiceModel> model)
+        {
+            List<ResponseBookingModel> result = new List<ResponseBookingModel>();
+            foreach (ResponseBookingServiceModel responseBooking in model)
+                result.Add(new ResponseBookingModel()
+                {
+                    Address = responseBooking.Address,
+                    Description = responseBooking.Description,
+                    NameHotel = responseBooking.NameHotel,
+                    BookingModels = responseBooking.BookingModels
+                });
+            return result;
+        }
     }
 }

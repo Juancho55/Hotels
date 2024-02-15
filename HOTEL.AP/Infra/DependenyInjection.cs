@@ -1,5 +1,6 @@
 ﻿using HOTEL.API.ADO;
 using HOTEL.API.ADO.Interface;
+using Infra.Booking;
 using Infra.Hotel;
 using Infra.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +14,7 @@ namespace Infra
         {
             services.AddSingleton<IHotelContext, HotelContext>(db => new HotelContext(configuration, "HotelConnectionString"));
             services.AddSingleton<IHotel, HotelInfra>();
+            services.AddSingleton<IBooking, BookingInfra>();
         }
     }
 }
