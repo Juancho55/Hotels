@@ -1,0 +1,9 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/988b3bff-4d0d-4ea3-bc09-cc8d49850227/resourceGroups/DefaultResourceGroup-CCAN/providers/Microsoft.Web/sites/hotelwebtest",
+    "appService.deploySubpath": "hotels.app\\dist\\hotels.app",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.showBuildDuringDeployPrompt": false
+}

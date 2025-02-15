@@ -1,0 +1,49 @@
+<div class="formSave">
+    <br />
+    <h2>Guardar hotel</h2>
+    <form>
+        <div class="contentControl">
+            <p>Nombre del hotel</p>
+            <input placeholder="Ingrese el Nombre del Hotel" type="text" id="name" [(ngModel)]="name"
+                [ngModelOptions]="{standalone: true}" />
+        </div>
+        <div class="contentControl">
+            <p>Dirección</p>
+            <input placeholder="Ingrese la dirección del hotel" type="text" id="address" [(ngModel)]="address"
+                [ngModelOptions]="{standalone: true}" />
+        </div>
+        <div class="contentControl">
+            <p>Descripción</p>
+            <input placeholder="Ingresar la descripción del hotel" type="text" id="description"
+                [(ngModel)]="description" [ngModelOptions]="{standalone: true}" />
+        </div>
+        <div class="contentControl">
+            <p>Activo</p>
+            <input id="active" type="radio" [(ngModel)]="active" [ngModelOptions]="{standalone: true}" />
+        </div>
+        <div>
+            <br />
+            <input type="button" value="Agregar" (click)="addHotel()" />
+        </div>
+    </form>
+</div>
+<div class="getItems">
+    <br />
+    <h2>Obtener información del hotel con reserva</h2>
+    <div class="headersTable">
+        <h5>Nombre hotel</h5>
+        <h5>Dirección</h5>
+        <h5>Descripción</h5>
+    </div>
+    <div class="repeatItems">
+        <div class="itmes" *ngFor="let item of data">
+            {{item.nameHotel}}
+        </div>
+        <div class="itmes" *ngFor="let item of data">
+            {{item.address}}
+        </div>
+        <div class="itmes" *ngFor="let item of data">
+            {{item.description}}
+        </div>
+    </div>
+</div>

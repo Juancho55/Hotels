@@ -1,0 +1,13 @@
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\bin\Release\net6.0\HOTEL.ADO.deps.json
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\bin\Release\net6.0\HOTEL.ADO.dll
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\bin\Release\net6.0\HOTEL.ADO.pdb
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.csproj.AssemblyReference.cache
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.AssemblyInfoInputs.cache
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.AssemblyInfo.cs
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.csproj.CoreCompileInputs.cache
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.sourcelink.json
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.dll
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\refint\HOTEL.ADO.dll
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\HOTEL.ADO.pdb
+C:\Projects\OTHER TES\Hotels\HOTEL.AP\HOTEL.ADO\obj\Release\net6.0\ref\HOTEL.ADO.dll

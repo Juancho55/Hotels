@@ -1,0 +1,85 @@
+.getItems{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #7ab9ef;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.formSave{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #7ab9ef;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.formSave input{
+    width: 90%;
+    height: 5vh;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.formSave input[type=button]{
+    background-color: black;
+    color: #ffffff;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 40% !important;
+}
+
+.formSave input[type=button]:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+.headersTable{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.headersTable h5{
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #FFFFFF;
+    padding-left: 2%;
+    font-size: 18px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.repeatItems{
+    width: 100%;
+    text-align: justify;
+    padding-bottom: 3%;
+    margin-top: -2%;
+    padding-left: 1.8%;
+}
+
+.repeatItems .itmes{
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #000000;
+    padding-left: 2%;
+    vertical-align: top;
+    min-height: 4vh;
+    padding-top: 1%;
+    font-size: 12px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.contentControl
+{
+    width: 50%;
+    display: inline-block;
+}
